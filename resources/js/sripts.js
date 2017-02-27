@@ -1,16 +1,15 @@
 
 $(document).ready(function () {
     "use strict";
-    new Waypoint({
-        element: document.getElementsByClassName('js--section--features')[0],
-        handler: function(direction) {
-            if (direction === "down") {
-                $('nav').addClass("sticky");
-                /*$('nav').addClass('sticky');*/
-            } else {
-                $('nav').removeClass('sticky');
-            }
-        },
+
+    $('.js--section--features').waypoint(function (direction) {
+        if (direction === "down") {
+            $('nav').addClass("sticky");
+            /*$('nav').addClass('sticky');*/
+        } else {
+            $('nav').removeClass('sticky');
+        }
+    }, {
         offset: 60
     });
 
@@ -26,7 +25,7 @@ $(document).ready(function () {
     /* scroll for navigation */
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                 if (target.length) {
@@ -40,35 +39,46 @@ $(document).ready(function () {
     });
 
     /* Animations on scroll */
-    new Waypoint({
-        element: document.getElementsByClassName('js--wp-1')[0],
-        handler: function(direction) {
-            $('.js--wp-1').addClass("animated fadeIn");
-        },
+    $('.js--wp-1').waypoint(function (direction) {
+        $('.js--wp-1').addClass("animated fadeIn");
+    }, {
         offset: "50%"
     });
 
-    new Waypoint({
-        element: document.getElementsByClassName('js--wp-2')[0],
-        handler: function(direction) {
-            $('.js--wp-2').addClass("animated fadeInUp");
-        },
+    $('.js--wp-2').waypoint(function (direction) {
+        $('.js--wp-2').addClass("animated fadeInUp");
+    }, {
         offset: "50%"
     });
 
-    new Waypoint({
-        element: document.getElementsByClassName('js--wp-3')[0],
-        handler: function(direction) {
-            $('.js--wp-3').addClass("animated fadeIn");
-        },
+    $('.js--wp-3').waypoint(function (direction) {
+        $('.js--wp-3').addClass("animated fadeIn");
+    }, {
         offset: "50%"
     });
 
-    new Waypoint({
-        element: document.getElementsByClassName('js--wp-4')[0],
-        handler: function(direction) {
-            $('.js--wp-4').addClass("animated pulse");
-        },
+    $('.js--wp-4').waypoint(function (direction) {
+        $('.js--wp-4').addClass("animated pulse");
+    }, {
         offset: "50%"
+    });
+
+    /* mobile nav */
+
+    $('.js--nav-icon').click(function () {
+       var nav = $('.js--main-nav');
+       nav.slideToggle(200, function () {
+
+
+
+       var icon = $('.js--nav-icon i');
+       if (icon.hasClass('ion-navicon-round')) {
+           icon.addClass('ion-close-round');
+           icon.removeClass('ion-navicon-round');
+       } else {
+           icon.addClass('ion-navicon-round');
+           icon.removeClass('ion-close-round');
+       }
+        });
     });
 });
