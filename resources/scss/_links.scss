@@ -1,0 +1,21 @@
+@import "variables";
+
+/* ---------------------------------------------------------------- */
+/* LINKS*/
+/* ---------------------------------------------------------------- */
+a {
+    &:link,
+    &:visited {
+        border-bottom: 1px solid $orange-default;
+        color: $orange-default;
+        padding-bottom: 1px;
+        text-decoration: none;
+        transition: border-bottom $transition-time-default, color $transition-time-default;
+    }
+
+    &:hover,
+    &:active {
+        border-bottom: 1px solid transparent;
+        color: $grey-default;
+    }
+}

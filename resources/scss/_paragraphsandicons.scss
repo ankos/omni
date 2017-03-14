@@ -1,0 +1,41 @@
+@import "variables";
+
+/* ---------------------------------------------------------------- */
+/* PARAGRAPHS */
+/* ---------------------------------------------------------------- */
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box {
+    p {
+        font-size: 90%;
+        line-height: 145%;
+    }
+}
+
+
+/* ---------------------------------------------------------------- */
+/* ICONS */
+/* ---------------------------------------------------------------- */
+
+.icon-big {
+    color: $orange-default;
+    display: block;
+    font-size: 350%;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    color: $orange-default;
+    display: inline-block;
+    font-size: 120%;
+    line-height: 120%;
+    margin-top: -5px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
