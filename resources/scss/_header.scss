@@ -1,3 +1,5 @@
+@import "variables";
+
 /* ---------------------------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------------------------- */
@@ -9,7 +11,7 @@ header {
 
 .hero-text-box {
   position: absolute;
-  width: 1140px;
+  width: $default-width;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -28,5 +30,4 @@ header {
   width: auto;
   float: left;
   margin: 5px 0;
-  display: none;
 }

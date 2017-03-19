@@ -1,0 +1,41 @@
+@import "variables";
+/* ---------------------------------------------------------------- */
+/* CONTACT-FORM */
+/* ---------------------------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+@mixin form-element-style {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid $grey-light;
+}
+
+input[type=text] {
+    @include form-element-style;
+}
+
+input[type=email] {
+    @include form-element-style;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+select {
+    @include form-element-style;
+}
+
+textarea {
+    @include form-element-style;
+    height: 100px;
+}
+
+*:focus {
+    outline: none;
+}

@@ -1,0 +1,15 @@
+@import "../../base/manifest" ;
+
+header {
+    background-size: cover;
+    height: 100vh; 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url($hero-min) fixed center;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: $default-width;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,11 @@
+@import "../../base/manifest";
+
+html,
+body {
+    color: $grey-default;
+    font-family: $font, sans-serif;
+    font-size: $font-size-default;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}

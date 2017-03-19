@@ -25,8 +25,8 @@
 }
 
 @mixin btn-ghost {
-  border: 1px solid #e67e22;
-  color: #e67e22;
+  border: 1px solid $orange-default;
+  color: $orange-default;
 }
 
 input[type=submit] {

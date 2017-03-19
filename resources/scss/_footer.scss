@@ -1,0 +1,95 @@
+@import "variables";
+
+/* ---------------------------------------------------------------- */
+/* FOOTER */
+/* ---------------------------------------------------------------- */
+@mixin list-elements {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+@mixin margin-last-child {
+    margin: 0;
+}
+
+@mixin basic-link-styling {
+    text-decoration: none;
+    border: 0;
+    color: $grey-footer-font;
+    transition: color $transition-time-default;
+}
+
+footer {
+    background-color: $grey-footer;
+    padding: 50px;
+    font-size: 80%;
+
+    p {
+        color: $grey-footer-font;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+
+    li {
+        @include list-elements;
+
+        &:last-child {
+            @include margin-last-child;
+        }
+    }
+
+    a:link, a:visited {
+        @include basic-link-styling;
+    }
+
+    a:hover, a:active {
+        color: $grey-footer-font-hover;
+    }
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+
+    li {
+        @include list-elements;
+
+        &:last-child {
+            @include margin-last-child;
+        }
+    }
+
+    a:link, a:visited {
+        @include basic-link-styling;
+        font-size: 160%
+    }
+}
+
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    transition: color $transition-time-default;
+}
+
+.ion-social-facebook:hover {
+    color: $facebook-blue;
+}
+
+.ion-social-twitter:hover {
+    color: $twitter-blue;
+}
+
+.ion-social-googleplus:hover {
+    color: $googleplus-red;
+}
+
+.ion-social-instagram:hover {
+    color: $instagram-blue;
+}

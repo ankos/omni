@@ -12,6 +12,8 @@ body {
     overflow-x: hidden;
 }
 
+@import "reusable_components";
+
 @import "header";
 @import "navigation";
 @import "headings";
@@ -29,6 +31,15 @@ body {
         margin-bottom: 30px;
     }
 }
+
+@import "cities";
+@import "testimonials";
+@import "plans";
+@import "contactform";
+@import "footer";
+@import "animations";
+
+
 
 
 
