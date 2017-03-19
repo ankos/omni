@@ -1,0 +1,14 @@
+@import "../../base/manifest";
+
+.row {
+    max-width: $default-width;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}

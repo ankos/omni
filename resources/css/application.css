@@ -17,6 +17,16 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden; }
 
+.row {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+section {
+  padding: 80px 0; }
+
+.box {
+  padding: 1%; }
+
 header {
   background-size: cover;
   height: 100vh;
